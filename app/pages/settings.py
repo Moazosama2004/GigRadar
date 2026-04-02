@@ -19,13 +19,18 @@ class SettingsPage(ctk.CTkFrame):
     def _load_config(self):
         if os.path.exists(CONFIG_PATH):
             with open(CONFIG_PATH, "r") as f:
-                self.config = json.load(f)
+                content = f.read().strip()
+                self.config = json.loads(
+                    content) if content else self._default_config()
         else:
-            self.config = {
-                "mostaql_url":  "",
-                "nafzly_url":   "",
-                "sites": {"mostaql": True, "nafzly": True},
-            }
+            self.config = self._default_config()
+
+    def _default_config(self):
+        return {
+            "mostaql_url": "",
+            "nafzly_url":  "",
+            "sites": {"mostaql": True, "nafzly": True},
+        }
 
     def _build_header(self):
         ctk.CTkLabel(
