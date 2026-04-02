@@ -20,8 +20,14 @@ class SettingsPage(ctk.CTkFrame):
         if os.path.exists(CONFIG_PATH):
             with open(CONFIG_PATH, "r") as f:
                 content = f.read().strip()
-                self.config = json.loads(
-                    content) if content else self._default_config()
+                loaded = json.loads(content) if content else {}
+                # Merge with defaults so missing keys never crash
+                default = self._default_config()
+                default.update(loaded)
+                # Make sure sites key always exists
+                if "sites" not in default:
+                    default["sites"] = {"mostaql": True, "nafzly": True}
+                self.config = default
         else:
             self.config = self._default_config()
 

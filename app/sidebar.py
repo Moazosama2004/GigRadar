@@ -5,9 +5,9 @@ import customtkinter as ctk
 NAV_ITEMS = [
     ("Dashboard",  "dashboard"),
     ("Resume",     "resume"),
-    ("Accounts",   "settings"),
-    ("Scan",       "settings"),
-    ("Results",    "settings"),
+    ("Scan",       "scan"),
+    ("Results",    "dashboard"),
+    ("Settings",   "settings"),
 ]
 
 

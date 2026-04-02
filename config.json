@@ -1,20 +1,24 @@
 {
+  "mostaql_url": "",
+  "nafzly_url": "",
+  "sites": {
+    "mostaql": false,
+    "nafzly": true
+  },
   "profile": {
-    "file_path": "C:/Users/ezemo/OneDrive/Desktop/Moaz_Osama_Android_Developer_Resume.pdf",
-    "name": "Moaz Osama \nMOBILE",
-    "title": "MOBILE APP DEVELOPER",
+    "file_path": "C:/Users/ezemo/Downloads/Moaz_Osama_s_Copy (1).pdf",
+    "name": "Moaz Osama Ahmed",
+    "title": "Mobile App Developer",
     "skills": [
+      "api",
+      "arabic",
       "ci/cd",
-      "docker",
       "git",
       "java",
-      "kotlin",
-      "mysql",
-      "python",
-      "rest"
+      "kotlin"
     ],
     "experience": "Not specified",
-    "email": "moazosama204@gmail.com",
-    "phone": "20)15538504"
+    "email": "",
+    "phone": "+20 1553850440"
   }
 }
